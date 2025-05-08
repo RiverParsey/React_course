@@ -1,26 +1,8 @@
-.container {
-  width: 700px;
+body {
+  width: 900px;
   margin: 0 auto;
-  border: 1px solid rgba(0,0,0, .2);
-}
-.text {
-  padding: 20px;
-  font-size: 18px;
-}
-.button-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 10px 0;
-}
-.text-button {
-  padding: 5px 10px;
-  border: 1px solid rgba(0,0,0, .2);
-  text-align: center;
-  cursor: pointer;
-}
-
-.active {
-  display: none;
+  padding: 25px;
+  border: 1px solid gray;
+  border-top: none;
+  border-bottom: none;
 }
