@@ -7,6 +7,8 @@ import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 import './app.css';
 
+// lesson-18_only-theory
+
 class App extends Component {
   constructor(props) {
     super(props);
