@@ -1,7 +1,17 @@
-import { createRoot } from "react-dom/client";
-import App from "./components/app/App";
-import "./style/style.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/app/App';
+import MarverService from './services/MarverService';
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App />);
+import './style/style.scss';
+
+const marvelService = new MarverService();
+
+marvelService.getAllCharacters().then(res => res.data.results.forEach(item => console.log(item.name)));
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
