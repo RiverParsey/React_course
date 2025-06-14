@@ -23,30 +23,12 @@ class MarverService {
   }
 
   _transformCharacter = (char) => {
-    if (char.description === '') {
-      return {
-        name: char.name,
-        description: 'Description unavailable',
-        thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
-        homepage: char.urls[0].url,
-        wiki: char.urls[1].url
-      }
-    } else if (char.description.length > 150) {
-      return {
-        name: char.name,
-        description: char.description.slice(0, 150) + '...',
-        thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
-        homepage: char.urls[0].url,
-        wiki: char.urls[1].url
-      }
-    } else {
-      return {
-        name: char.name,
-        description: char.description,
-        thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
-        homepage: char.urls[0].url,
-        wiki: char.urls[1].url
-      }
+    return {
+      name: char.name,
+      description: char.description ? `${char.description.slice(0, 210)}...` : 'There is no description for this character',
+      thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
+      homepage: char.urls[0].url,
+      wiki: char.urls[1].url
     }
   }
 }
