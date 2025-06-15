@@ -1,4 +1,4 @@
-class MarverService {
+class MarvelService {
   _apiBase = 'https://gateway.marvel.com:443/v1/public/';
   _apiKey = 'apikey=d67c171cf7d327e4cf9d4557f99e2e03';
 
@@ -33,4 +33,4 @@ class MarverService {
   }
 }
 
-export default MarverService;
+export default MarvelService;
